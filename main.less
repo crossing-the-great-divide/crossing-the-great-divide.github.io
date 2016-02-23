@@ -1,0 +1,154 @@
+@text-color: #515151;
+@line-color: #b3b3b3;
+@highlight-color: #b3b3b3;
+@selected-color: black;
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body{
+	min-width: 320px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
+	background: #FFFFFF;
+	color: @text-color;
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1095px) {
+	header#masthead #site-title {
+		width: 274px;
+		position: absolute;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 528px) {
+	section#main aside#left {
+		display: none;
+	}
+}
+
+/* HEADER */
+
+header#masthead {
+	width: 100%;
+	float: left;
+}
+
+#site-title {
+	width: 25%;
+	min-width: 274px;
+	height: 8.8125em;
+	float: left;
+	background-color: #ffffff;
+	border-bottom: 0.0625em solid @line-color;
+}
+
+#site-title h1 {
+	float: right;
+	margin: 4em 4.75em 0 0;
+	font-size: 0.9em;
+	text-transform: UPPERCASE;
+	letter-spacing: 0.35em;
+	font-weight: 500;
+}
+
+#site-title h1 a {
+	padding: 1em;
+	display: block;
+	text-decoration: none;
+	color: @selected-color;
+}
+
+#banner {
+	width: 75%;
+	overflow: hidden;
+	height: 8.8125em;
+	float: right;
+	clear: right;
+	background-image: url("assets/banner.jpg");
+	background-repeat: repeat-x;
+}
+
+/* MAIN NAVIGATION */
+
+nav#main-navigation {
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+#main-navigation ul {
+	margin: 0;
+	padding: 0 1.625em 3.5em 1.625em ;
+	border-bottom: 1px dotted @line-color;
+	list-style-type: none;
+}
+
+#main-navigation ul li {
+	display: inline-block;
+	margin: 0.75em 0.75em 0 0;
+}
+
+#main-navigation ul li a {
+	padding: 1em;
+	display: block;
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+	color: @text-color;
+	font-size: 0.6em;
+	line-height: 1.5em;
+	letter-spacing: 0.5em;
+	text-transform: UPPERCASE;
+	font-weight: 700;
+}
+
+#main-navigation ul li a:hover {
+	border-bottom: 1px solid @line-color;
+	color: @highlight-color;
+}
+
+#main-navigation ul li a.current,
+#main-navigation ul li a:active {
+	border-bottom: 1px dotted @line-color;
+	color: @selected-color;
+}
+
+/* MAIN */
+
+section#main {
+	width: 100%;
+	padding: 2em;
+	float:left
+}
+
+aside#left {
+	width: 6em;
+	height: 500px;
+	float: left;
+	margin-right: 1em;
+	margin-top: -2em;
+}
+
+#left p {
+	font-size: 0.6em;
+	font-family: sans-serif;
+	color: @highlight-color;
+	text-transform: UPPERCASE;
+}
+
+section#home {
+	max-width: 22em;
+	float: left;
+}
+
+#home p {
+	font-size: 0.8em;
+	line-height: 1.4em;
+	text-align: justify;
+}
