@@ -1,31 +1,14 @@
 doctype
 html
 	head
+		title= title
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" href="main.css")
-	- var site = { baseURL: '/' };
 	body
-		header#masthead
-			#site-title
-				h1 
-					a(href='#{site.baseURL}') Don Pollack
-			#banner
-		nav#main-navigation
-			ul
-				li 
-					a(href='#{site.baseURL}painting') Painting
-				li
-					a(href='#') Museum In Trust
-				li
-					a(href='#') Crossing The Great Divide
-				li
-					a(href='#') Contact
-				li
-					a(href='#') Blog
-				li
-					a(href='#') Vita
+		!= partial("partials/_header")
 		section#main
 			aside#left
 				p Taking Measure
 			section#home
 				!= yield
+		script(src="site.js")
