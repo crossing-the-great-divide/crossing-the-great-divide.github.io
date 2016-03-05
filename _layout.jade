@@ -7,8 +7,6 @@ html
 	body
 		!= partial("partials/_header")
 		section#main
-			aside#left
-				p Taking Measure
-			section#home
-				!= yield
+			aside#left= tagline
+			!= yield
 		script(src="site.js")

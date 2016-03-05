@@ -27,12 +27,6 @@ body{
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 528px) {
-	section#main aside#left {
-		display: none;
-	}
-}
-
 /* HEADER */
 
 header#masthead {
@@ -123,32 +117,56 @@ nav#main-navigation {
 
 section#main {
 	width: 100%;
-	padding: 2em;
-	float:left
+	padding: 2em 2em 2em 3.5em;
+	float:left;
+	margin: 0;
+}
+
+#main aside#left {
+	position: relative;
+	left: -2em;
+	top: -2.75em;
+	margin-bottom: -100em;
 }
 
 aside#left {
-	width: 6em;
-	height: 500px;
-	float: left;
-	margin-right: 1em;
-	margin-top: -2em;
-}
-
-#left p {
 	font-size: 0.6em;
 	font-family: sans-serif;
 	color: @highlight-color;
 	text-transform: UPPERCASE;
+	font-weight: 100;
 }
 
-section#home {
+@media only screen and (min-width: 0) and (max-width: 528px) {
+	section#main {
+		padding: 2em 2em 2em 2em;
+	}
+	section#main aside#left {
+		//display:none;
+		left: 0;
+	}
+	section#main .single-col .project {
+		max-width: 22em;
+	}
+	section#main .project {
+		margin-left: 0;
+	}
+}
+
+#main .single-col {
 	max-width: 22em;
 	float: left;
 }
 
-#home p {
+#main p {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	text-align: justify;
+}
+
+#main .project {
+	float: left;
+	max-width: 22em;
+	min-height: 500px;
+	margin: 0 0 0 3.5em;
 }
