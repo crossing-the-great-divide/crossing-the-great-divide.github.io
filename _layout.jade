@@ -1,12 +1,18 @@
 doctype
-html
+html(class="#{ current.path[0] == 'projects' ? current.source : '' }")
 	head
 		title= title
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="stylesheet" href="/main.css")
+		link(rel="stylesheet" href="/css/main.css")
 	body
-		!= partial("partials/_header")
+		header#masthead
+			#site-title
+				h1
+					a(href="/") Don Pollack
+			#banner
+		!= partial("_nav")
 		section#main
-			aside#left= tagline
+			aside#left
+				p= tagline
 			!= yield
 		script(src="site.js")

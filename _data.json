@@ -1,4 +1,13 @@
 {
+	"painting": {
+		"title": "Painting"
+	},
+	"museum": {
+		"title": "Museum In Trust"
+	},
+	"crossing": {
+		"title": "Crossing The Great Divide"
+	},
 	"contact": {
 		"title": "Contact"
 	},
