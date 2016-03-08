@@ -1,11 +1,11 @@
 nav#main-navigation
 	ul
-		li(class="#{ current.source == 'painting' ? 'active' : '' }")
-			a(href="/painting" id="painting") Painting
-		li(class="#{ current.source == 'museum' ? 'active' : '' }")
-			a(href="/museum" id="museum") Museum In Trust
+		li(class="#{ current.path[0] == 'projects' ? 'active' : '' }")
+			a(href="/projects" id="Projects") Projects
 		li(class="#{ current.source == 'crossing' ? 'active' : '' }")
 			a(href="/crossing/" id="crossing") Crossing The Great Divide
+		li(class="#{ current.source == 'museum' ? 'active' : '' }")
+			a(href="/museum" id="museum") Museum In Trust
 		li(class="#{ current.source == 'contact' ? 'active' : '' }")
 			a(href="/contact" id="contact") Contact
 		li

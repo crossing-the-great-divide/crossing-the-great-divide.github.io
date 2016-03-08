@@ -5,14 +5,11 @@ html(class="#{ current.path[0] == 'projects' ? current.source : '' }")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" href="/css/main.css")
 	body
-		header#masthead
-			#site-title
-				h1
-					a(href="/") Don Pollack
-			#banner
-		!= partial("_nav")
+		!= partial("partials/_masthead")
+		!= partial("partials/_nav")
 		section#main
 			aside#left
-				p= tagline
+				p= tagline				
+				each number in [ '2034.0', '2033.0', '2032.0', '2031.0', '2030.0' ]
+					.number= number
 			!= yield
-		script(src="site.js")

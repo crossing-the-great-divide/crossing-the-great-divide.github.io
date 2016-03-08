@@ -11,8 +11,9 @@ html {
 
 body{
 	min-width: 320px;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Adobe Garamond Pro", "Times New Roman", Times, serif;
 	font-size: 100%;
+	font-weight: normal;
 	background: #FFFFFF;
 	color: @text-color;
 	margin: 0;
@@ -35,6 +36,9 @@ body{
 }
 
 @media only screen and (min-width: 0) and (max-width: 528px) {
+	#left .number {
+		float: left;
+	}
 	section#main {
 		padding: 2em 2em 2em 2em;
 	}
@@ -130,9 +134,22 @@ section#main {
 }
 
 aside#left {
+	max-width: 100%;
 	position: absolute;
 	top: -0.5em;
 	left: 2em;
+}
+
+#left .number {
+	position: relative;
+	top: -0.5em;
+	margin-right: 14em;
+	margin-bottom: 14em;
+	overflow: hidden;
+}
+
+#left p {
+	position: absolute;
 }
 
 .single-col, .project {
@@ -169,7 +186,6 @@ aside#left {
 	font-size: 0.9em;
 	text-transform: UPPERCASE;
 	letter-spacing: 0.35em;
-	font-weight: 500;
 }
 
 #site-title h1 a {
@@ -186,7 +202,6 @@ aside#left {
 	line-height: 1.5em;
 	letter-spacing: 0.5em;
 	text-transform: UPPERCASE;
-	font-weight: 700;
 	border-bottom: 1px solid transparent;
 }
 
@@ -205,10 +220,20 @@ aside#left {
 
 aside#left p {
 	font-size: 0.6em;
-	font-family: sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: @highlight-color;
 	text-transform: UPPERCASE;
 	font-weight: 100;
+	letter-spacing: 0.1em;
+}
+
+// Numbers
+
+#left .number {
+	font-size: 0.5em;
+	font-family: "";
+	font-weight: 100;
+	color: @highlight-color;
 	letter-spacing: 0.1em;
 }
 
