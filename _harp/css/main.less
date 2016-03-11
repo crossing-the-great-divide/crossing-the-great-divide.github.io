@@ -36,8 +36,15 @@ body {
 }
 
 @media only screen and (min-width: 0) and (max-width: 528px) {
+	#left {
+		width: 256px;
+	}
 	#left .number {
-		float: left;
+		display: none;
+		width: 100%;
+	}
+	#left .number:nth-child(2) {
+		display: block;
 	}
 	section#main {
 		padding: 2em 2em 2em 2em;
