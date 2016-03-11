@@ -9,9 +9,9 @@ html {
 	box-sizing: inherit;
 }
 
-body{
+body {
 	min-width: 320px;
-	font-family: "Adobe Garamond Pro", "Times New Roman", Times, serif;
+	font-family: @serif-font;
 	font-size: 100%;
 	font-weight: normal;
 	background: #FFFFFF;
@@ -56,7 +56,7 @@ body{
 
 @media only screen and (min-width: 529px) {
 	section#main {
-		padding: 3.5em 2em 2em 3.5em;		
+		padding: 3.5em 2em 2em 3.5em;
 	}
 	.single-col, .project {
 		margin-left: 3.5em;
@@ -81,7 +81,7 @@ header#masthead {
 
 #site-title h1 {
 	float: right;
-	margin: 4em 4.75em 0 0;
+	margin: 3em 3em 0 0;
 }
 
 #site-title h1 a {
@@ -183,14 +183,17 @@ aside#left {
 // Site Title
 
 #site-title h1 {
-	font-size: 0.9em;
-	text-transform: UPPERCASE;
-	letter-spacing: 0.35em;
+	//font-size: 0.9em;
+	font-size: 1em;
+	font-weight: normal;
 }
 
 #site-title h1 a {
 	text-decoration: none;
-	color: @selected-color;
+	color: @text-color;
+	font-weight: bold;
+	text-transform: UPPERCASE;
+	letter-spacing: 0.35em;
 }
 
 // Main Naviagtion
@@ -220,8 +223,8 @@ aside#left {
 
 aside#left p {
 	font-size: 0.6em;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: @highlight-color;
+	font-family: @sans-serif-font;
+	color: @text-color;
 	text-transform: UPPERCASE;
 	font-weight: 100;
 	letter-spacing: 0.1em;
@@ -239,7 +242,15 @@ aside#left p {
 
 // Main
 
-#main p {
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: Bold;
+}
+
+p {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	text-align: justify;
